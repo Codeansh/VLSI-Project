@@ -1,27 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+ @layer utilities {
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+   /* Chrome, Safari and Opera */
+   .no-scrollbar::-webkit-scrollbar {
+     display: none;
+   }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+   .no-scrollbar {
+     -ms-overflow-style: none;
+     /* IE and Edge */
+     scrollbar-width: none;
+     /* Firefox */
+   }
+ }
+
+ .input-phone-number input:focus {
+   outline: none !important;
+   border: none !important;
+ }
+
+ .no-outline {}
+ .parent-element:focus-within {
+   outline: 2px solid rgba(96, 165, 250, 0.5);
+  border-radius: 0.5rem;
+   /* Replace with your desired color and size */
+ }
+ .no-out:focus {
+   outline: none;
+   /* Remove default outline */
+   box-shadow: 0 0 0 2px #0a0032;
+   /* Add a custom box shadow or border to indicate focus */
+ }
